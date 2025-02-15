@@ -8,8 +8,8 @@ from pydantic import BaseModel
 HISTORY_FILE = "conversation_history.json"
 
 # Configurar OLLAMA_HOST desde la variable de entorno (por defecto a localhost)
-# OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
-# os.environ["OLLAMA_HOST"] = OLLAMA_HOST  # Establecer la variable globalmente
+OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+os.environ["OLLAMA_HOST"] = OLLAMA_HOST  # Establecer la variable globalmente
 
 app = FastAPI()
 
